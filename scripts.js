@@ -19,9 +19,27 @@ function handleSubmit(event) {
     .then(response => response.json())
     .then(json => {
       form.innerHTML = `<h3>${json.message}</h3>`
-      // getCustomers()
+      getPets()
     })
     .catch(err => {
       form.innerHTML = '<h3>Error sending pets</h3>'
     })
 }
+
+function getPets() {
+    fetch('https://ls-pet-boutique.web.app/pets')
+    .then(response => response.json())
+    .then(data => {
+      const petsDiv = document.getElementById('pets')
+      const petsArray = data.map(pet => {
+        return `<article>
+          <h3>${pet.petName} ${pet.petType}</h3>
+          <p>${pet.color}</p> <p>${pet.age}</p>
+        </article>`
+      })
+      petsDiv.innerHTML = petsArray.join('')
+    })
+    .catch(err => console.log(err))
+    }
+    
+    getPets()
