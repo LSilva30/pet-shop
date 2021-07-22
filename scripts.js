@@ -33,8 +33,9 @@ function getPets() {
       const petsDiv = document.getElementById('pets')
       const petsArray = data.map(pet => {
         return `<article>
-          <h3>${pet.petName} ${pet.petType}</h3>
-          <p>${pet.color}</p> <p>${pet.age}</p>
+          <h3> Pet Name: ${pet.petName}</h3>
+          <h4> Type: ${pet.petType}</h4> 
+          <p> Color: ${pet.color}</p> <p> Age: ${pet.age}</p> 
         </article>`
       })
       petsDiv.innerHTML = petsArray.join('')
