@@ -30,7 +30,7 @@ li {
     padding-top: 0.6%;
 }
 section {
-    height: 650px;
+    height: 100px;
     text-align: center;
 }
 
@@ -48,6 +48,7 @@ section {
     background-blend-mode: screen;
     width: 100%;
     color: white;
+    height: 650px
 }
 
 #pets {
@@ -59,4 +60,18 @@ section {
 article {
     max-width: 300px;
     margin-top: 30px;
+}
+
+.pets-hero {
+    background: url(./img/adopt-a-pet.jpeg);
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    width: 100%;
+    height: 650px
 }
