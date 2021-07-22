@@ -1,0 +1,51 @@
+*,                               /*always start with this code to take away the extra spacing in your site*/
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    background-color: black;
+    height: 30px;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    background-color: black;
+}
+
+li {
+    float: left;
+    padding-left: 3%;
+    padding-top: 0.6%;
+}
+section {
+    height: 650px;
+    text-align: center;
+}
+.hero-section {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+
+    background: url(./img/1561_pet_store_1200.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-color: black;
+    background-blend-mode: screen;
+    width: 100%;
+    color: white;
+}
+
